@@ -13,6 +13,7 @@ project that uses them.
 - Record architectural decisions and their consequences.
 - Gather feedback on proposed changes before implementation.
 - Turn requirements and decisions into actionable specifications.
+- Document operational procedures that people and AI agents can execute safely.
 - Maintain traceability between related documents and implementation work.
 - Support planning, progress tracking, and review.
 
@@ -21,6 +22,7 @@ project that uses them.
 - [`adrs/`](adrs/): Architecture Decision Records that explain important technical choices.
 - [`rfcs/`](rfcs/): Requests for Comments that invite discussion on larger proposals.
 - [`specs/`](specs/): Technical and functional specifications that guide implementation.
+- [`runbooks/`](runbooks/): Step-by-step procedures for recurring operations, maintenance, and incident response.
 
 Each directory includes a `README.md` and a starter template. Keep document
 IDs, status, and links to related work up to date.
@@ -50,8 +52,10 @@ Adjust the directory path and branch name to fit the consuming project.
 1. Write an RFC when a change needs broad discussion.
 2. Once the proposal is approved, record lasting architectural choices as ADRs.
 3. Turn the work into Specs with clear, verifiable acceptance criteria.
-4. Link each document to its related work items and review records.
-5. Keep statuses current as work progresses.
+4. When a Spec introduces or changes an operational procedure, write or update
+   the matching Runbook and link the two documents.
+5. Link each document to its related work items and review records.
+6. Keep statuses current as work progresses.
 
 Each section's README and template define its statuses, naming rules, and
 traceability fields. Until supporting tools are available, follow these
