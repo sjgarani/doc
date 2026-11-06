@@ -18,56 +18,56 @@ related_specs: []
 tags: []
 ---
 
-# ADR-0000: Short and objective title of the architectural decision
+# ADR-0000: Título curto e objetivo da decisão
 
-## Context and Problem Statement
+## Contexto e problema
 
-Describe the technical and business context, the architectural problem that needs to be solved, and the constraints or forces at play (latency, scalability, security, maintainability, deadlines, team expertise).
+Descreva o contexto técnico e de negócio, o problema de arquitetura a resolver e as restrições ou forças envolvidas (latência, escalabilidade, segurança, facilidade de manutenção, prazos, conhecimento da equipe).
 
-## Decision Drivers
+## Critérios de decisão
 
-- Driver 1 (e.g., strict data consistency requirements)
-- Driver 2 (e.g., low operational overhead for the current team)
-- Driver 3 (e.g., seamless integration with existing CI/CD pipelines)
+- Critério 1 (ex.: consistência de dados rigorosa)
+- Critério 2 (ex.: pouca carga operacional para a equipe atual)
+- Critério 3 (ex.: integração simples com os pipelines de CI/CD que já existem)
 
-## Considered Options
+## Opções consideradas
 
-1. **Option 1**: Name of approach A
-2. **Option 2**: Name of approach B
-3. **Option 3**: Keep current baseline (do nothing)
+1. **Opção 1**: nome da abordagem A
+2. **Opção 2**: nome da abordagem B
+3. **Opção 3**: deixar como está (não fazer nada)
 
-## Pros and Cons of the Options
+## Prós e contras das opções
 
-### Option 1: Name of approach A
+### Opção 1: nome da abordagem A
 
-- **Pros**:
-  - Key benefit 1
-- **Cons**:
-  - Limitation or trade-off 1
+- **Prós**:
+  - Principal vantagem 1
+- **Contras**:
+  - Limitação ou custo 1
 
-### Option 2: Name of approach B
+### Opção 2: nome da abordagem B
 
-- **Pros**:
-  - Key benefit 1
-- **Cons**:
-  - Limitation or trade-off 1
+- **Prós**:
+  - Principal vantagem 1
+- **Contras**:
+  - Limitação ou custo 1
 
-## Decision Outcome
+## Decisão
 
-**Chosen option**: "[Option Name]", because [clear justification connecting back to the decision drivers].
+**Opção escolhida**: "[nome da opção]", porque [justificativa clara, apoiada nos critérios de decisão].
 
-## Consequences
+## Consequências
 
-### Positive
-- Expected improvements in architecture, developer velocity, or reliability.
+### Positivas
+- Ganhos esperados em arquitetura, produtividade da equipe ou confiabilidade.
 
-### Negative / Trade-offs
-- Technical debt accepted, added complexity, or migration effort required.
+### Negativas e concessões
+- Dívida técnica assumida, complexidade a mais ou esforço de migração.
 
-## Compliance & Validation (AI & Code Review)
+## Verificação de conformidade (IA e revisão de código)
 
-> This section instructs AI coding assistants and human reviewers on how to verify that repository code complies with this architectural decision.
+> Esta seção explica a assistentes de código com IA e a revisores humanos como verificar se o código do repositório respeita esta decisão.
 
-- **Mandatory Patterns**: [e.g., All database queries must be encapsulated inside `src/repositories/`].
-- **Forbidden Patterns**: [e.g., Do not invoke external HTTP clients directly inside domain entities].
-- **Automated Verification**: [e.g., Architectural unit tests / linter rules / automated checks].
+- **Padrões obrigatórios**: [ex.: todo acesso ao banco de dados fica encapsulado em `src/repositories/`].
+- **Padrões proibidos**: [ex.: entidades de domínio não chamam clientes HTTP externos diretamente].
+- **Verificação automática**: [ex.: testes de arquitetura, regras de linter ou outras checagens automáticas].

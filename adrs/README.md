@@ -1,48 +1,47 @@
-# Architecture Decision Records (ADRs)
+# ADRs (registros de decisão de arquitetura)
 
-This directory contains the project's **Architecture Decision Records (ADRs)**. An ADR captures a significant architectural decision, the context and problem it addresses, the options evaluated, and the resulting consequences.
+Aqui ficam os **ADRs** (*Architecture Decision Records*) do projeto. Cada ADR registra uma decisão de arquitetura relevante: o contexto e o problema que levaram a ela, as opções avaliadas e as consequências da escolha.
 
 ---
 
-## Lifecycle & Statuses
+## Ciclo de vida
 
-Change an ADR's status through the project's review workflow.
+O status de um ADR muda pelo fluxo de revisão do projeto.
 
-| Status | Description |
+| Status | Significado |
 | :--- | :--- |
-| `proposed` | Decision is under review. |
-| `accepted` | Decision is approved and active. Developers and AI agents must follow its rules. |
-| `deprecated` | Decision is no longer relevant because the underlying system or feature was retired. |
-| `superseded` | Decision has been replaced by a newer ADR (requires `--superseded-by ADR-NNNN`). |
+| `proposed` | Decisão em revisão. |
+| `accepted` | Decisão aprovada e em vigor. Desenvolvedores e agentes de IA devem seguir as regras dela. |
+| `deprecated` | A decisão não vale mais porque o sistema ou a funcionalidade a que se refere foi desativado. |
+| `superseded` | A decisão foi substituída por um ADR mais novo (exige `--superseded-by ADR-NNNN`). |
 
 ---
 
-## Naming Convention
+## Nome dos arquivos
 
-Files follow a 4-digit sequential number in `kebab-case`:
+O nome começa com um número sequencial de 4 dígitos, seguido do título em `kebab-case`:
 
 ```text
-NNNN-short-decision-title.md
+NNNN-titulo-curto-da-decisao.md
 ```
 
-**Examples:**
-- `0001-adopt-doc2gh-documentation-architecture.md`
-- `0002-use-postgresql-as-primary-database.md`
+**Exemplos:**
+- `0001-adotar-a-arquitetura-de-documentacao-doc2gh.md`
+- `0002-usar-postgresql-como-banco-principal.md`
 
 ---
 
-## Creating and Updating ADRs
+## Como criar e atualizar um ADR
 
-Start with `template.md` and assign the next available ID. Explain the decision,
-the alternatives considered, and the consequences. Submit the ADR for review,
-then update the status when the decision is settled. Workflow
-automation may be added later.
+Use o `template.md` como base e o próximo ID livre. Explique a decisão, as alternativas
+consideradas e as consequências. Envie o ADR para revisão e atualize o status quando a decisão
+for fechada. Por enquanto esse fluxo é manual; a automação pode vir depois.
 
 ---
 
-## AI Agent Guidance
+## Orientações para agentes de IA
 
-1. **Instructions for AI Agents**:
-   - Read all `accepted` ADRs before proposing or reviewing architectural changes.
-   - Enforce all rules listed under **Compliance & Validation (AI & Code Review)** when generating or reviewing code.
-   - Never alter the core decision of an `accepted` ADR; instead, create a new ADR and mark the previous one as `superseded`.
+1. **Instruções para agentes de IA**:
+   - Antes de propor ou revisar mudanças de arquitetura, leia todos os ADRs com status `accepted`.
+   - Ao gerar ou revisar código, faça cumprir todas as regras da seção **Verificação de conformidade (IA e revisão de código)**.
+   - Nunca altere a decisão central de um ADR `accepted`. Para mudá-la, crie um novo ADR e marque o anterior como `superseded`.

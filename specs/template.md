@@ -17,63 +17,63 @@ related_runbooks: []
 tags: []
 ---
 
-# SPEC-0000: Title of the feature or module to be implemented
+# SPEC-0000: Título da funcionalidade ou do módulo
 
-## Overview and Objective
+## Visão geral e objetivo
 
-Clearly state what is being built, the problem it solves, and the expected outcome.
+Diga com clareza o que vai ser construído, que problema isso resolve e qual o resultado esperado.
 
-## AI Agent Context
+## Contexto para agentes de IA
 
-> Direct instructions to guide AI coding assistants when reading context and generating code for this specification.
+> Instruções diretas para assistentes de código com IA: o que ler de contexto e como gerar o código desta especificação.
 
-- **Affected Modules / Directories**:
-  - `path/to/module`
-- **Applicable Mandatory ADRs**:
-  - `ADR-NNNN`: [Summary of architectural rule that must be respected]
-- **Verification / Test Commands**:
-  - `project test or lint command`
+- **Módulos e diretórios afetados**:
+  - `caminho/do/modulo`
+- **ADRs obrigatórios**:
+  - `ADR-NNNN`: [resumo da regra de arquitetura a respeitar]
+- **Comandos de teste e verificação**:
+  - `comando de teste ou de lint do projeto`
 
-## Functional Requirements
+## Requisitos funcionais
 
-- **FR-01**: The system must...
-- **FR-02**: When [event occurs], the system must...
+- **RF-01**: O sistema deve...
+- **RF-02**: Quando [evento], o sistema deve...
 
-## Non-Functional Requirements & Constraints
+## Requisitos não funcionais e restrições
 
-- **NFR-01 (Performance / Scalability)**: ...
-- **NFR-02 (Security / Input Validation)**: ...
-- **NFR-03 (Observability / Logging)**: ...
+- **RNF-01 (desempenho e escalabilidade)**: ...
+- **RNF-02 (segurança e validação de entrada)**: ...
+- **RNF-03 (observabilidade e logs)**: ...
 
-## Technical Design
+## Design técnico
 
-### 1. Data Models / Entities
-Describe new or modified tables, schemas, types, or data structures.
+### 1. Modelos de dados e entidades
+Descreva as tabelas, schemas, tipos ou estruturas de dados criados ou alterados.
 
-### 2. Interfaces / APIs / Contracts
-Define function signatures, endpoints, request/response payloads, and error codes.
+### 2. Interfaces, APIs e contratos
+Defina as assinaturas de funções, os endpoints, os payloads de requisição e resposta e os códigos de erro.
 
-### 3. Execution Flow & Edge Cases
-- Edge case 1 and expected handling
-- Edge case 2 and expected handling
+### 3. Fluxo de execução e casos-limite
+- Caso-limite 1 e como tratá-lo
+- Caso-limite 2 e como tratá-lo
 
-## Acceptance Criteria
+## Critérios de aceitação
 
-- [ ] **AC-01**: Given [precondition], when [action], then [expected result].
-- [ ] **AC-02**: Given [invalid input or failure], when [action], then [expected error handling].
+- [ ] **CA-01**: Dado que [pré-condição], quando [ação], então [resultado esperado].
+- [ ] **CA-02**: Dado que [entrada inválida ou falha], quando [ação], então [tratamento de erro esperado].
 
-## Task Breakdown (AI Execution)
+## Divisão de tarefas (execução por IA)
 
-Incremental, verifiable implementation steps:
+Passos de implementação pequenos e verificáveis:
 
-- [ ] **Task 1**: Create/update data models and schemas
-- [ ] **Task 2**: Implement core domain/service logic
-- [ ] **Task 3**: Expose API/interface and input validation
-- [ ] **Task 4**: Write unit and integration tests covering all acceptance criteria
-- [ ] **Task 5**: Update usage documentation if applicable
+- [ ] **Tarefa 1**: Criar ou atualizar os modelos de dados e schemas
+- [ ] **Tarefa 2**: Implementar a lógica principal de domínio ou de serviço
+- [ ] **Tarefa 3**: Expor a API ou interface, com validação de entrada
+- [ ] **Tarefa 4**: Escrever testes unitários e de integração que cubram todos os critérios de aceitação
+- [ ] **Tarefa 5**: Atualizar a documentação de uso, se for o caso
 
-## Test & Verification Plan
+## Plano de testes e verificação
 
-- **Unit Tests**: Key scenarios and boundary conditions to cover.
-- **Integration / E2E Tests**: End-to-end flows to verify.
-- **Manual Verification**: Steps to validate locally or in a staging environment.
+- **Testes unitários**: Principais cenários e valores-limite a cobrir.
+- **Testes de integração / E2E**: Fluxos completos a verificar.
+- **Verificação manual**: Como validar localmente ou em homologação.

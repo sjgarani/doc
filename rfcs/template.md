@@ -17,62 +17,62 @@ target_specs: []
 tags: []
 ---
 
-# RFC-0000: Descriptive title of the technical proposal
+# RFC-0000: Título descritivo da proposta
 
-## Executive Summary
+## Resumo
 
-Provide a concise (1–2 paragraphs) summary explaining what is being proposed and the expected value.
+Em um ou dois parágrafos, explique o que está sendo proposto e o que se ganha com isso.
 
-## Motivation
+## Motivação
 
-- What problem are we solving?
-- Why is it important to solve it now?
-- Who are the affected users, services, or workflows?
+- Que problema estamos resolvendo?
+- Por que resolver agora?
+- Quem é afetado: que usuários, serviços ou fluxos de trabalho?
 
-## Goals and Non-Goals
+## Objetivos e fora de escopo
 
-### Goals (In-Scope)
-- Measurable objective 1
-- Measurable objective 2
+### Objetivos
+- Objetivo mensurável 1
+- Objetivo mensurável 2
 
-### Non-Goals (Out-of-Scope)
-- What this proposal explicitly **will not** address
+### Fora de escopo
+- O que esta proposta deliberadamente **não** vai tratar
 
-## Detailed Design / Proposal
+## Proposta detalhada
 
-Describe the proposed technical solution in sufficient depth for engineering review:
-- High-level architecture (Mermaid diagrams encouraged)
-- Data model changes, API contracts, or public interfaces
-- Core execution flows and error handling strategies
+Descreva a solução técnica com detalhe suficiente para a revisão da engenharia:
+- Arquitetura em alto nível (diagramas Mermaid são bem-vindos)
+- Mudanças no modelo de dados, em contratos de API ou em interfaces públicas
+- Principais fluxos de execução e como os erros são tratados
 
 ```mermaid
 flowchart TD
-    A["Client / Producer"] --> B["Proposed Component"]
-    B --> C["Storage / Downstream Service"]
+    A["Cliente / produtor"] --> B["Componente proposto"]
+    B --> C["Armazenamento / serviço de destino"]
 ```
 
-## Impact, Risks, and Compatibility
+## Impacto, riscos e compatibilidade
 
-- **Breaking Changes**: Does this break backward compatibility? How will migration be handled?
-- **Security & Privacy**: Authentication, authorization, data protection, or attack-surface considerations.
-- **Performance & Operations**: Resource usage, observability, metrics, and rollout strategy.
+- **Quebra de compatibilidade**: A mudança quebra a compatibilidade com versões anteriores? Como vai ser a migração?
+- **Segurança e privacidade**: Autenticação, autorização, proteção de dados e superfície de ataque.
+- **Desempenho e operação**: Consumo de recursos, observabilidade, métricas e estratégia de implantação.
 
-## Alternatives Considered
+## Alternativas consideradas
 
-### Alternative A: [Name]
-- **Description**: Brief overview of the alternative approach.
-- **Reason for Rejection**: Why the primary proposal was chosen instead.
+### Alternativa A: [nome]
+- **Descrição**: Resumo da abordagem alternativa.
+- **Por que foi descartada**: O que levou a escolher a proposta principal no lugar desta.
 
-## Open Questions
+## Pontos em aberto
 
-- [ ] Open question 1 to be resolved during review
-- [ ] Open question 2
+- [ ] Ponto em aberto 1, a resolver durante a revisão
+- [ ] Ponto em aberto 2
 
-## Adoption Plan & Follow-up Artifacts
+## Plano de adoção e documentos derivados
 
-Once this RFC is approved (`status: approved`), create the following downstream artifacts:
+Quando esta RFC for aprovada (`status: approved`), crie os documentos abaixo:
 
-- **ADRs to Create**:
-  - [ ] `ADR-NNNN`: [Title of architectural decision derived from this RFC]
-- **Specs to Create**:
-  - [ ] `SPEC-NNNN`: [Title of executable specification for implementation]
+- **ADRs a criar**:
+  - [ ] `ADR-NNNN`: [título da decisão de arquitetura que sai desta RFC]
+- **Specs a criar**:
+  - [ ] `SPEC-NNNN`: [título da especificação que vai guiar a implementação]

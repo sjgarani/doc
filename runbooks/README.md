@@ -1,56 +1,55 @@
 # Runbooks
 
-This directory stores the project's **Runbooks**. A Runbook is a step-by-step operational procedure that a developer, an operator or an **AI agent** can execute. Runbooks cover recurring operations, routine maintenance and incident response, such as rotating credentials, restoring a backup or recovering a failed service.
+Aqui ficam os **Runbooks** do projeto. Um Runbook é um procedimento operacional, passo a passo, que pode ser executado por um desenvolvedor, por um operador ou por um **agente de IA**. Os Runbooks cobrem operações recorrentes, manutenção de rotina e resposta a incidentes, como trocar credenciais, restaurar um backup ou pôr de pé um serviço que caiu.
 
 ---
 
-## Lifecycle & Statuses
+## Ciclo de vida
 
-Change a Runbook's status through the project's review workflow.
+O status de um Runbook muda pelo fluxo de revisão do projeto.
 
-| Status | Description |
+| Status | Significado |
 | :--- | :--- |
-| `draft` | Procedure is being written or has never been executed end to end. |
-| `active` | Procedure has been verified (`last_verified_at` is set) and can be executed. |
-| `deprecated` | Procedure no longer applies because the system or operation was retired or replaced. The file is kept for historical context. |
+| `draft` | Procedimento em redação, ou que nunca foi executado do início ao fim. |
+| `active` | Procedimento verificado (`last_verified_at` preenchido) e liberado para execução. |
+| `deprecated` | O procedimento não se aplica mais, porque o sistema ou a operação foi desativado ou substituído. O arquivo continua no repositório como histórico. |
 
 ---
 
-## Naming Convention
+## Nome dos arquivos
 
-Files follow a 4-digit sequential number in `kebab-case`:
+O nome começa com um número sequencial de 4 dígitos, seguido do título em `kebab-case`:
 
 ```text
-NNNN-action-or-scenario.md
+NNNN-acao-ou-cenario.md
 ```
 
-**Examples:**
-- `0001-rotate-database-credentials.md`
-- `0002-restore-service-from-backup.md`
+**Exemplos:**
+- `0001-trocar-credenciais-do-banco-de-dados.md`
+- `0002-restaurar-servico-a-partir-do-backup.md`
 
 ---
 
-## Creating and Updating Runbooks
+## Como criar e atualizar um Runbook
 
-Start with `template.md` and assign the next available ID. Describe when to run the procedure,
-its prerequisites and its risks. Then write each step with its command, expected result and
-failure handling. Never store secrets in a Runbook. Point to the secret store or the credential
-owner instead.
+Use o `template.md` como base e o próximo ID livre. Diga quando o procedimento deve ser
+executado, o que ele exige e quais são os riscos. Depois escreva cada passo com o comando, o
+resultado esperado e o que fazer se ele falhar. Nunca coloque segredos em um Runbook: indique
+onde obtê-los, seja o cofre de segredos ou o responsável pela credencial.
 
-Link the Runbook to the Specs and ADRs it derives from (`related_specs`, `related_adrs`), and
-list it under `related_runbooks` in those Specs. Submit the Runbook for review, and move it to
-`active` only after a successful end-to-end execution, recorded in `last_verified_at`.
+Ligue o Runbook às Specs e aos ADRs de que ele deriva (`related_specs`, `related_adrs`) e
+inclua-o em `related_runbooks` nessas Specs. Envie o Runbook para revisão e só passe para
+`active` depois de uma execução completa bem-sucedida, registrada em `last_verified_at`.
 
-When the underlying system changes, update the steps and `updated_at`. Change
-`last_verified_at` only after the next successful execution. Workflow automation may be added
-later.
+Quando o sistema mudar, atualize os passos e o `updated_at`. O `last_verified_at` só muda depois
+da próxima execução bem-sucedida. Por enquanto esse fluxo é manual; a automação pode vir depois.
 
 ---
 
-## AI Agent Guidance
+## Orientações para agentes de IA
 
-1. **Instructions for AI Agents**:
-   - Execute only `active` Runbooks. Treat `draft` Runbooks as unverified, and never execute `deprecated` ones.
-   - Follow the **AI Agent Execution Rules** section. Run the steps listed under **Safe to run without confirmation** directly. Ask for human confirmation before any step listed under **Requires human confirmation**. Stop at any of the **Stop conditions**.
-   - When a step's result differs from its **Expected result**, follow its **On failure** instructions instead of continuing.
-   - When asked to draft a Runbook, inspect the related Specs, ADRs and code to identify the commands, risks and rollback steps.
+1. **Instruções para agentes de IA**:
+   - Execute apenas Runbooks `active`. Runbooks `draft` ainda não foram verificados, e os `deprecated` nunca devem ser executados.
+   - Siga a seção **Regras de execução para agentes de IA**: execute direto os passos listados em **Executar sem confirmação**, peça confirmação humana antes de qualquer passo listado em **Exige confirmação humana** e pare assim que ocorrer qualquer situação de **Quando parar**.
+   - Se o resultado de um passo não for o **Resultado esperado**, siga o que diz **Se falhar** em vez de continuar.
+   - Ao redigir um Runbook, consulte as Specs, os ADRs e o código relacionados para levantar os comandos, os riscos e os passos de rollback.

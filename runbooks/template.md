@@ -17,69 +17,69 @@ related_adrs: []
 tags: []
 ---
 
-# RUNBOOK-0000: Action-oriented title of the operational procedure
+# RUNBOOK-0000: Título do procedimento, começando pela ação
 
-## Purpose and Triggers
+## Objetivo e quando usar
 
-- **Purpose**: State the outcome this procedure produces.
-- **Triggers**: List what calls for this procedure, such as alert names, observed symptoms, scheduled maintenance or requests.
+- **Objetivo**: Diga que resultado este procedimento entrega.
+- **Quando usar**: Liste o que leva a executá-lo, como nomes de alertas, sintomas observados, manutenções programadas ou solicitações.
 
-## Prerequisites
+## Pré-requisitos
 
-- **Access & Permissions**: List the systems, roles or environments the operator needs.
-- **Tools**: List the required CLIs, scripts or consoles, with minimum versions if they matter.
-- **Approvals**: List the change requests or sign-offs needed before starting.
-- **Credentials**: Say where to obtain them, such as a secret store path or the credential owner. Never write secret values in this document.
+- **Acessos e permissões**: Sistemas, perfis ou ambientes de que o operador precisa.
+- **Ferramentas**: CLIs, scripts ou consoles necessários, com a versão mínima quando ela fizer diferença.
+- **Aprovações**: Solicitações de mudança ou aprovações que precisam sair antes de começar.
+- **Credenciais**: Onde obtê-las, como o caminho no cofre de segredos ou o responsável pela credencial. Nunca escreva segredos neste documento.
 
-## Risk and Impact
+## Riscos e impacto
 
-- **Service Impact**: Describe expected downtime, degraded performance or user-visible effects.
-- **Data Risk**: Describe the data that may be modified, deleted or exposed.
-- **Irreversible Steps**: List the steps that cannot be rolled back, for example Step N.
-- **Maintenance Window**: Say when this procedure may and may not be executed.
+- **Impacto no serviço**: Indisponibilidade prevista, queda de desempenho ou efeitos que os usuários vão perceber.
+- **Risco para os dados**: Que dados podem ser alterados, apagados ou expostos.
+- **Passos irreversíveis**: Os passos que não têm volta, por exemplo o passo N.
+- **Janela de manutenção**: Quando o procedimento pode e quando não pode ser executado.
 
-## Procedure
+## Procedimento
 
-Execute the steps in order. If a result differs from the **Expected result**, stop and follow **On failure**. Omit **Command** for manual actions.
+Execute os passos na ordem. Se o resultado de um passo não for o **Resultado esperado**, pare e siga **Se falhar**. Em ações manuais, deixe de fora o **Comando**.
 
-### Step 1: Short description of the action
+### Passo 1: Descrição curta da ação
 
-- **Command**:
+- **Comando**:
   ```bash
-  command --with-arguments
+  comando --com-argumentos
   ```
-- **Expected result**: Describe what the operator should observe when the step succeeds.
-- **On failure**: Go to [Rollback](#rollback) or [Escalation](#escalation).
+- **Resultado esperado**: O que o operador deve ver quando o passo dá certo.
+- **Se falhar**: Vá para [Rollback](#rollback) ou [Escalonamento](#escalonamento).
 
-### Step 2: Short description of the action
+### Passo 2: Descrição curta da ação
 
-- **Command**:
+- **Comando**:
   ```bash
-  command --with-arguments
+  comando --com-argumentos
   ```
-- **Expected result**: Describe what the operator should observe when the step succeeds.
-- **On failure**: Go to [Rollback](#rollback) or [Escalation](#escalation).
+- **Resultado esperado**: O que o operador deve ver quando o passo dá certo.
+- **Se falhar**: Vá para [Rollback](#rollback) ou [Escalonamento](#escalonamento).
 
-## Verification
+## Verificação
 
-- List the checks that confirm the procedure succeeded, such as commands, dashboards or health endpoints, with the expected result of each.
+- Liste as checagens que confirmam que o procedimento deu certo (comandos, dashboards ou endpoints de saúde) e o resultado esperado de cada uma.
 
 ## Rollback
 
-Revert each state-changing step in reverse order:
+Desfaça, na ordem inversa, cada passo que alterou o estado do sistema:
 
-1. Revert Step 2: command or action.
-2. Revert Step 1: command or action.
+1. Desfazer o passo 2: comando ou ação.
+2. Desfazer o passo 1: comando ou ação.
 
-## Escalation
+## Escalonamento
 
-- **Contacts**: Name the team, on-call rotation or owner to contact.
-- **When to Escalate**: List the conditions that require stopping and escalating, for example a failed rollback or impact beyond what **Risk and Impact** describes.
+- **Contatos**: A equipe, o plantão ou o responsável a acionar.
+- **Quando escalonar**: As situações em que é preciso parar e escalonar, como um rollback que falhou ou um impacto maior do que o previsto em **Riscos e impacto**.
 
-## AI Agent Execution Rules
+## Regras de execução para agentes de IA
 
-> This section tells AI agents which steps they may execute and when they must stop.
+> Esta seção diz aos agentes de IA quais passos eles podem executar sozinhos e quando devem parar.
 
-- **Safe to run without confirmation**: [e.g., Step 1, a read-only status check].
-- **Requires human confirmation**: [e.g., Step 2, which restarts the service]. Every state-changing, irreversible or outward-facing step belongs here.
-- **Stop conditions**: [e.g., Any unexpected result, a missing prerequisite, or impact beyond what **Risk and Impact** describes].
+- **Executar sem confirmação**: [ex.: passo 1, uma consulta de status que só faz leitura].
+- **Exige confirmação humana**: [ex.: passo 2, que reinicia o serviço]. Todo passo que altera estado, não tem volta ou produz efeito fora do sistema entra aqui.
+- **Quando parar**: [ex.: qualquer resultado inesperado, um pré-requisito faltando ou um impacto maior do que o previsto em **Riscos e impacto**].
