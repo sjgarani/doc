@@ -64,3 +64,7 @@ dentro do fluxo de revisão do projeto.
 
 Este repositório contém o framework de documentação. Ferramentas para criar, validar e
 sincronizar documentos podem surgir com o tempo, mas nenhuma é necessária para começar a usar.
+
+## License
+
+Entregue sobre a [MIT License](LICENSE).
