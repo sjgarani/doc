@@ -66,3 +66,8 @@ templates through the project's review workflow.
 This repository provides the documentation framework. Tools for creating,
 validating, and syncing documents may be added over time; they are not required
 to start using it.
+
+## License
+
+Released under the [MIT License](LICENSE).
+
