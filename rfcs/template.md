@@ -12,8 +12,7 @@ updated_at: YYYY-MM-DD
 authors:
   - "@author"
 reviewers: []
-related_adrs: []
-target_specs: []
+related_prds: []
 tags: []
 ---
 
@@ -76,3 +75,5 @@ Once this RFC is approved (`status: approved`), create the following downstream 
   - [ ] `ADR-NNNN`: [Title of architectural decision derived from this RFC]
 - **Specs to Create**:
   - [ ] `SPEC-NNNN`: [Title of executable specification for implementation]
+- **Runbooks to Create / Update**:
+  - [ ] `RUNBOOK-NNNN`: [Title of operational procedure derived from this RFC]

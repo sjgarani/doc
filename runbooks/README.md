@@ -37,8 +37,7 @@ its prerequisites and its risks. Then write each step with its command, expected
 failure handling. Never store secrets in a Runbook. Point to the secret store or the credential
 owner instead.
 
-Link the Runbook to the Specs and ADRs it derives from (`related_specs`, `related_adrs`), and
-list it under `related_runbooks` in those Specs. Submit the Runbook for review, and move it to
+Link the Runbook to the Specs and ADRs it derives from (`related_specs`, `related_adrs`). Submit the Runbook for review, and move it to
 `active` only after a successful end-to-end execution, recorded in `last_verified_at`.
 
 When the underlying system changes, update the steps and `updated_at`. Change

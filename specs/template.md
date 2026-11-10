@@ -11,9 +11,9 @@ updated_at: YYYY-MM-DD
 # ============================================================================
 owners:
   - "@owner"
+related_prds: []
 related_rfcs: []
 related_adrs: []
-related_runbooks: []
 tags: []
 ---
 
@@ -70,7 +70,7 @@ Incremental, verifiable implementation steps:
 - [ ] **Task 2**: Implement core domain/service logic
 - [ ] **Task 3**: Expose API/interface and input validation
 - [ ] **Task 4**: Write unit and integration tests covering all acceptance criteria
-- [ ] **Task 5**: Update usage documentation if applicable
+- [ ] **Task 5**: Update usage documentation and related Runbooks if applicable
 
 ## Test & Verification Plan
 

@@ -47,4 +47,4 @@ added later.
    - The **AI Agent Context** section specifies affected directories/files, mandatory ADRs to follow, and test/verification commands.
    - The **Task Breakdown** uses task-list syntax (`- [ ]`) so developers and AI agents can track incremental implementation progress.
 2. **Traceability**:
-   - Every Spec in `ready` or `in-progress` status should be linked to its related work items and review records.
+   - Every Spec in `ready` or `in-progress` status should reference its upstream documents (`related_prds`, `related_rfcs`, `related_adrs`) and review records.

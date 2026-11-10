@@ -46,8 +46,8 @@ automation may be added later.
 1. **Review**:
    - Submit new RFCs for review.
    - Resolve items listed under **Open Questions** during review.
-2. **Spawning ADRs and Specs**:
-   - Once an RFC transitions to `approved`, extract binding architectural decisions into **ADRs** (`adrs/`) and break down the implementation into **Specs** (`specs/`).
+2. **Spawning ADRs, Specs, and Runbooks**:
+   - Once an RFC transitions to `approved`, extract binding architectural decisions into **ADRs** (`adrs/`), break down the implementation into **Specs** (`specs/`), and identify operational procedures in **Runbooks** (`runbooks/`).
 3. **Instructions for AI Agents**:
-   - When asked to draft an RFC, inspect the existing codebase to identify affected components, compatibility risks, and viable alternatives.
-   - When an RFC is `approved`, use its **Adoption Plan & Follow-up Artifacts** checklist to create the corresponding ADRs and Specs.
+   - When asked to draft an RFC, inspect the existing codebase, `accepted` ADRs, and any related PRD (`related_prds`) to identify affected components, compatibility risks, and viable alternatives.
+   - When an RFC is `approved`, use its **Adoption Plan & Follow-up Artifacts** checklist to create the corresponding ADRs, Specs, and Runbooks.
