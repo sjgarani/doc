@@ -10,6 +10,7 @@ project that uses them.
 ## Goals
 
 - Provide a consistent structure for technical documentation.
+- Capture product requirements, user problems, and success metrics before technical design.
 - Record architectural decisions and their consequences.
 - Gather feedback on proposed changes before implementation.
 - Turn requirements and decisions into actionable specifications.
@@ -19,8 +20,9 @@ project that uses them.
 
 ## Structure
 
-- [`adrs/`](adrs/): Architecture Decision Records that explain important technical choices.
+- [`prds/`](prds/): Product Requirements Documents that define user problems, goals, success metrics, and scope.
 - [`rfcs/`](rfcs/): Requests for Comments that invite discussion on larger proposals.
+- [`adrs/`](adrs/): Architecture Decision Records that explain important technical choices.
 - [`specs/`](specs/): Technical and functional specifications that guide implementation.
 - [`runbooks/`](runbooks/): Step-by-step procedures for recurring operations, maintenance, and incident response.
 
@@ -49,13 +51,14 @@ Adjust the directory path and branch name to fit the consuming project.
 
 ## Recommended Workflow
 
-1. Write an RFC when a change needs broad discussion.
-2. Once the proposal is approved, record lasting architectural choices as ADRs.
-3. Turn the work into Specs with clear, verifiable acceptance criteria.
-4. When a Spec introduces or changes an operational procedure, write or update
+1. Write a PRD when defining a product capability, user problem, and success metrics.
+2. Write an RFC when a technical change needs broad discussion.
+3. Once the proposal is approved, record lasting architectural choices as ADRs.
+4. Turn the work into Specs with clear, verifiable acceptance criteria.
+5. When a Spec introduces or changes an operational procedure, write or update
    the matching Runbook and link the two documents.
-5. Link each document to its related work items and review records.
-6. Keep statuses current as work progresses.
+6. Link each document to its upstream documents, work items, and review records.
+7. Keep statuses current as work progresses.
 
 Each section's README and template define its statuses, naming rules, and
 traceability fields. Until supporting tools are available, follow these
@@ -70,4 +73,3 @@ to start using it.
 ## License
 
 Released under the [MIT License](LICENSE).
-
