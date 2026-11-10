@@ -11,9 +11,9 @@ updated_at: YYYY-MM-DD
 # ============================================================================
 owners:
   - "@owner"
+related_prds: []
 related_rfcs: []
 related_adrs: []
-related_runbooks: []
 tags: []
 ---
 
@@ -70,7 +70,7 @@ Passos de implementação pequenos e verificáveis:
 - [ ] **Tarefa 2**: Implementar a lógica principal de domínio ou de serviço
 - [ ] **Tarefa 3**: Expor a API ou interface, com validação de entrada
 - [ ] **Tarefa 4**: Escrever testes unitários e de integração que cubram todos os critérios de aceitação
-- [ ] **Tarefa 5**: Atualizar a documentação de uso, se for o caso
+- [ ] **Tarefa 5**: Atualizar a documentação de uso e os Runbooks relacionados, se for o caso
 
 ## Plano de testes e verificação
 

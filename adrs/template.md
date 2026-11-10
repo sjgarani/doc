@@ -14,7 +14,6 @@ deciders:
   - "@owner"
 supersedes: []
 related_rfcs: []
-related_specs: []
 tags: []
 ---
 

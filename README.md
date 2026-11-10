@@ -9,6 +9,7 @@ práticas de documentação ficam num só lugar e são sincronizadas em cada pro
 ## Objetivos
 
 - Dar à documentação técnica uma estrutura padronizada.
+- Registrar os requisitos de produto, os problemas dos usuários e as métricas de sucesso antes do design técnico.
 - Registrar as decisões de arquitetura e as consequências de cada uma.
 - Discutir as mudanças propostas antes de implementá-las.
 - Transformar requisitos e decisões em especificações prontas para execução.
@@ -18,8 +19,9 @@ práticas de documentação ficam num só lugar e são sincronizadas em cada pro
 
 ## Estrutura
 
-- [`adrs/`](adrs/): ADRs, os registros das decisões de arquitetura importantes e dos motivos de cada uma.
+- [`prds/`](prds/): PRDs, os documentos de requisitos de produto que definem problemas dos usuários, objetivos, métricas de sucesso e escopo.
 - [`rfcs/`](rfcs/): RFCs, as propostas maiores que precisam de discussão.
+- [`adrs/`](adrs/): ADRs, os registros das decisões de arquitetura importantes e dos motivos de cada uma.
 - [`specs/`](specs/): Specs, as especificações técnicas e funcionais que guiam a implementação.
 - [`runbooks/`](runbooks/): Runbooks, os procedimentos passo a passo para operações recorrentes, manutenção e resposta a incidentes.
 
@@ -48,13 +50,14 @@ Troque o diretório e o branch conforme o projeto.
 
 ## Fluxo recomendado
 
-1. Quando uma mudança precisar de discussão ampla, comece por uma RFC.
-2. Com a proposta aprovada, registre em ADRs as decisões de arquitetura que vão perdurar.
-3. Divida o trabalho em Specs, com critérios de aceitação claros e verificáveis.
-4. Se uma Spec cria ou altera um procedimento operacional, escreva ou atualize o Runbook
+1. Quando for definir uma funcionalidade do produto, o problema do usuário e as métricas de sucesso, comece por um PRD.
+2. Quando uma mudança técnica precisar de discussão ampla, escreva uma RFC.
+3. Com a proposta aprovada, registre em ADRs as decisões de arquitetura que vão perdurar.
+4. Divida o trabalho em Specs, com critérios de aceitação claros e verificáveis.
+5. Se uma Spec cria ou altera um procedimento operacional, escreva ou atualize o Runbook
    correspondente e ligue um documento ao outro.
-5. Ligue cada documento aos itens de trabalho e às revisões relacionadas.
-6. Atualize os status à medida que o trabalho avança.
+6. Ligue cada documento aos documentos de que ele deriva, aos itens de trabalho e às revisões relacionadas.
+7. Atualize os status à medida que o trabalho avança.
 
 Os status, as regras de nome e os campos de rastreabilidade de cada tipo estão no README e no
 template do diretório correspondente. Enquanto não houver ferramentas de apoio, siga os templates
@@ -65,6 +68,6 @@ dentro do fluxo de revisão do projeto.
 Este repositório contém o framework de documentação. Ferramentas para criar, validar e
 sincronizar documentos podem surgir com o tempo, mas nenhuma é necessária para começar a usar.
 
-## License
+## Licença
 
-Entregue sobre a [MIT License](LICENSE).
+Distribuído sob a [MIT License](LICENSE).

@@ -37,9 +37,9 @@ executado, o que ele exige e quais são os riscos. Depois escreva cada passo com
 resultado esperado e o que fazer se ele falhar. Nunca coloque segredos em um Runbook: indique
 onde obtê-los, seja o cofre de segredos ou o responsável pela credencial.
 
-Ligue o Runbook às Specs e aos ADRs de que ele deriva (`related_specs`, `related_adrs`) e
-inclua-o em `related_runbooks` nessas Specs. Envie o Runbook para revisão e só passe para
-`active` depois de uma execução completa bem-sucedida, registrada em `last_verified_at`.
+Ligue o Runbook às Specs e aos ADRs de que ele deriva (`related_specs`, `related_adrs`). Envie o
+Runbook para revisão e só passe para `active` depois de uma execução completa bem-sucedida,
+registrada em `last_verified_at`.
 
 Quando o sistema mudar, atualize os passos e o `updated_at`. O `last_verified_at` só muda depois
 da próxima execução bem-sucedida. Por enquanto esse fluxo é manual; a automação pode vir depois.

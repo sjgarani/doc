@@ -12,8 +12,7 @@ updated_at: YYYY-MM-DD
 authors:
   - "@author"
 reviewers: []
-related_adrs: []
-target_specs: []
+related_prds: []
 tags: []
 ---
 
@@ -76,3 +75,5 @@ Quando esta RFC for aprovada (`status: approved`), crie os documentos abaixo:
   - [ ] `ADR-NNNN`: [título da decisão de arquitetura que sai desta RFC]
 - **Specs a criar**:
   - [ ] `SPEC-NNNN`: [título da especificação que vai guiar a implementação]
+- **Runbooks a criar ou atualizar**:
+  - [ ] `RUNBOOK-NNNN`: [título do procedimento operacional que sai desta RFC]

@@ -45,8 +45,8 @@ o grupo chegar a uma decisão. Por enquanto esse fluxo é manual; a automação 
 1. **Revisão**:
    - Toda RFC nova passa por revisão.
    - Os itens de **Pontos em aberto** devem ser resolvidos durante a revisão.
-2. **Geração de ADRs e Specs**:
-   - Quando a RFC passar para `approved`, registre em **ADRs** (`adrs/`) as decisões de arquitetura que ela estabelece e divida a implementação em **Specs** (`specs/`).
+2. **Geração de ADRs, Specs e Runbooks**:
+   - Quando a RFC passar para `approved`, registre em **ADRs** (`adrs/`) as decisões de arquitetura que ela estabelece, divida a implementação em **Specs** (`specs/`) e descreva os procedimentos operacionais em **Runbooks** (`runbooks/`).
 3. **Instruções para agentes de IA**:
-   - Ao redigir uma RFC, analise o código existente para levantar os componentes afetados, os riscos de compatibilidade e as alternativas possíveis.
-   - Quando uma RFC estiver `approved`, use a checklist de **Plano de adoção e documentos derivados** para criar os ADRs e as Specs correspondentes.
+   - Ao redigir uma RFC, analise o código existente, os ADRs `accepted` e os PRDs relacionados (`related_prds`) para levantar os componentes afetados, os riscos de compatibilidade e as alternativas possíveis.
+   - Quando uma RFC estiver `approved`, use a checklist de **Plano de adoção e documentos derivados** para criar os ADRs, as Specs e os Runbooks correspondentes.

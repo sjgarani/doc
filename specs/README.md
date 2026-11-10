@@ -46,4 +46,4 @@ Por enquanto esse fluxo é manual; a automação pode vir depois.
    - A seção **Contexto para agentes de IA** indica os diretórios e arquivos afetados, os ADRs que precisam ser respeitados e os comandos de teste e verificação.
    - A **Divisão de tarefas** é uma checklist (`- [ ]`), para que desenvolvedores e agentes de IA acompanhem a implementação passo a passo.
 2. **Rastreabilidade**:
-   - Toda Spec `ready` ou `in-progress` deve estar ligada aos itens de trabalho e às revisões relacionadas.
+   - Toda Spec `ready` ou `in-progress` deve estar ligada aos documentos de que deriva (`related_prds`, `related_rfcs`, `related_adrs`) e às revisões relacionadas.
