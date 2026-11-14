@@ -1,0 +1,15 @@
+# AI agent instructions and settings
+CLAUDE.md
+CLAUDE.local.md
+.claude/
+.mcp.json
+AGENTS.md
+GEMINI.md
+.gemini/
+.codex/
+.cursor/
+.cursorrules
+.github/copilot-instructions.md
+.windsurfrules
+.clinerules
+.aider*
