@@ -26,7 +26,7 @@ NNNN-short-decision-title.md
 ```
 
 **Examples:**
-- `0001-adopt-doc2gh-documentation-architecture.md`
+- `0001-adopt-documentation-framework.md`
 - `0002-use-postgresql-as-primary-database.md`
 
 ---

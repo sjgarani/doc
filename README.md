@@ -33,23 +33,23 @@ IDs, status, and links to related work up to date.
 
 ## Using as a subtree
 
-In the consuming project, add this repository as a subtree under a dedicated
-directory:
+In the consuming project, add this repository as a subtree. Replace `<DIRECTORY>`
+with the directory that will hold the framework, such as `docs`:
 
 ```bash
-git remote add doc2gh <REPOSITORY_URL>
-git fetch doc2gh
-git subtree add --prefix=docs/doc2gh doc2gh main --squash
+git remote add doc https://github.com/sjgarani/doc.git
+git fetch doc
+git subtree add --prefix=<DIRECTORY> doc main --squash
 ```
 
 To pull in future updates:
 
 ```bash
-git fetch doc2gh
-git subtree pull --prefix=docs/doc2gh doc2gh main --squash
+git fetch doc
+git subtree pull --prefix=<DIRECTORY> doc main --squash
 ```
 
-Adjust the directory path and branch name to fit the consuming project.
+Use the same `<DIRECTORY>` when pulling updates.
 
 ## Recommended Workflow
 
